@@ -1,178 +1,1617 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Responsive full-width website template">
-  <meta name="theme-color" content="#111827">
-  <title>My Website</title>
+  <meta name="theme-color" content="#b91c1c">
+
+  <title>BBEST FOOD HOUSE | Food Products & Orders</title>
+  <meta name="description" content="Contact BBEST FOOD HOUSE on WhatsApp for information about available food products, menu, prices and orders.">
+
   <style>
-    :root {
-      --bg: #f8fafc;
-      --surface: #ffffff;
-      --text: #111827;
-      --muted: #64748b;
-      --accent: #d97706;
-      --accent-dark: #92400e;
-      --border: #e2e8f0;
-      --content-width: 1200px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; width: 100%; }
-    body {
+    * {
       margin: 0;
-      width: 100%;
-      min-width: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      background: #fffaf5;
+      color: #242424;
       line-height: 1.6;
-      overflow-wrap: anywhere;
     }
-    img, video, iframe, svg { max-width: 100%; }
-    img { height: auto; }
-    a { color: inherit; }
-    .site-header {
-      width: 100%;
-      background: #111827;
-      color: white;
-    }
-    .header-inner {
-      width: min(100%, var(--content-width));
-      margin: 0 auto;
-      padding: 14px 20px;
+
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      justify-content: center;
+      padding: 48px 18px;
+      background:
+        radial-gradient(circle at 10% 10%,
+          rgba(255, 196, 105, 0.25), transparent 35%),
+        linear-gradient(135deg, #fffaf5, #fff0df);
     }
-    .brand { margin: 0; font-size: clamp(1.2rem, 2.6vw, 1.8rem); line-height: 1.2; }
-    .brand a { text-decoration: none; }
-    .nav { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
-    .nav a { text-decoration: none; color: #f8fafc; font-size: .95rem; }
-    .nav a:hover { color: #fbbf24; }
-    .hero {
+
+    .hero-container {
       width: 100%;
-      min-height: 300px;
+      max-width: 1080px;
+      margin: auto;
       display: grid;
-      place-items: center;
-      padding: clamp(36px, 7vw, 84px) 20px;
-      text-align: center;
-      color: white;
-      background: linear-gradient(135deg, #111827, #374151 60%, #92400e);
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
     }
-    .hero-inner { width: min(100%, 900px); }
-    .hero h2 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.12; }
-    .hero p { margin: 0 auto 22px; max-width: 680px; color: #e5e7eb; font-size: clamp(1rem, 2vw, 1.2rem); }
-    .button {
-      display: inline-block; padding: 11px 18px; border-radius: 8px;
-      background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+
+    .brand {
+      display: inline-block;
+      color: #b91c1c;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
     }
-    .button:hover { background: var(--accent-dark); }
-    main { width: 100%; }
-    .section {
-      width: min(100%, var(--content-width));
-      margin: 0 auto;
-      padding: clamp(28px, 5vw, 56px) 20px;
+
+    h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+      color: #242424;
     }
-    .section h2 { margin: 0 0 12px; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.25; }
-    .section-intro { margin: 0 0 24px; color: var(--muted); max-width: 760px; }
-    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .card {
-      min-width: 0; padding: 22px; border: 1px solid var(--border);
-      border-radius: 14px; background: var(--surface);
+
+    h1 span {
+      color: #b91c1c;
     }
-    .card h3 { margin: 0 0 8px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); }
-    .about { background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .contact-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
-    .site-footer { width: 100%; background: #111827; color: #e5e7eb; }
-    .footer-inner {
-      width: min(100%, var(--content-width)); margin: 0 auto;
-      padding: 24px 20px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px;
+
+    .hero-description {
+      max-width: 550px;
+      font-size: 17px;
+      color: #555;
+      margin-bottom: 22px;
     }
-    .footer-inner p { margin: 0; }
+
+    .info-list {
+      list-style: none;
+      margin: 0 0 28px;
+    }
+
+    .info-list li {
+      margin: 10px 0;
+      color: #383838;
+      font-size: 15px;
+    }
+
+    .info-list li::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #ffeadb;
+      color: #b91c1c;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 14px 24px;
+      background: #168746;
+      color: #fff;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 7px 18px rgba(22, 135, 70, 0.18);
+      transition: background 0.2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: #116b37;
+    }
+
+    .whatsapp-btn:focus-visible {
+      outline: 3px solid #222;
+      outline-offset: 4px;
+    }
+
+    .whatsapp-icon {
+      width: 23px;
+      height: 23px;
+      flex-shrink: 0;
+    }
+
+    .small-note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 13px;
+      max-width: 440px;
+    }
+
+    .food-panel {
+      background: #fff;
+      border: 1px solid #f3dfce;
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 18px 50px rgba(94, 45, 20, 0.09);
+    }
+
+    .food-symbol {
+      width: 74px;
+      height: 74px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 39px;
+      background: #fff0df;
+      margin-bottom: 22px;
+    }
+
+    .food-panel h2 {
+      font-size: 25px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      color: #252525;
+    }
+
+    .food-panel p {
+      color: #626262;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .product-item {
+      border-top: 1px solid #f0e6df;
+      padding: 13px 0;
+      font-size: 14px;
+      color: #393939;
+    }
+
+    .product-item strong {
+      display: block;
+      color: #b91c1c;
+      font-size: 15px;
+      margin-bottom: 3px;
+    }
+
+    .contact-note {
+      font-size: 13px;
+      color: #686868;
+      margin-top: 18px;
+    }
+
     @media (max-width: 760px) {
-      .header-inner { align-items: flex-start; flex-direction: column; padding: 14px 16px; }
-      .nav { width: 100%; gap: 10px 16px; }
-      .nav a { font-size: .92rem; }
-      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .section { padding-left: 16px; padding-right: 16px; }
-      .hero { min-height: 260px; }
+      .hero {
+        min-height: auto;
+        padding: 42px 17px;
+      }
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(34px, 9vw, 46px);
+        letter-spacing: -0.8px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .info-list {
+        display: inline-block;
+        text-align: left;
+      }
+
+      .whatsapp-btn {
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .small-note {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .food-panel {
+        padding: 24px;
+        border-radius: 18px;
+      }
     }
-    @media (max-width: 480px) {
-      .cards { grid-template-columns: minmax(0, 1fr); }
-      .card { padding: 18px; }
-      .hero { padding-left: 16px; padding-right: 16px; }
-      .footer-inner { flex-direction: column; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .whatsapp-btn {
+        transition: none;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <h1 class="brand"><a href="#">My Website</a></h1>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero-inner">
-        <h2>Welcome to My Website</h2>
-        <p>A clean, full-width and mobile-responsive website template. Replace this text with your own business details.</p>
-        <a class="button" href="#contact">Contact Us</a>
-      </div>
-    </section>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-container">
 
-    <section class="section" id="services">
-      <h2>Our Services</h2>
-      <p class="section-intro">Add your services here. The layout adjusts automatically for mobile, tablet and desktop screens.</p>
-      <div class="cards">
-        <article class="card">
-          <h3>Service One</h3>
-          <p>Write a short description of your first service here.</p>
-        </article>
-        <article class="card">
-          <h3>Service Two</h3>
-          <p>Write a short description of your second service here.</p>
-        </article>
-        <article class="card">
-          <h3>Service Three</h3>
-          <p>Write a short description of your third service here.</p>
-        </article>
-      </div>
-    </section>
+        <div class="hero-content">
+          <div class="brand">Welcome to BBEST FOOD HOUSE</div>
 
-    <section class="about" id="about">
-      <div class="section">
-        <h2>About Us</h2>
-        <p class="section-intro">Add your business introduction here. Keep your content, images and links relevant to your website.</p>
-      </div>
-    </section>
+          <h1 id="hero-title">
+            Good Food,<br>
+            <span>Better Choices.</span>
+          </h1>
 
-    <section class="section" id="contact">
-      <div class="contact-box">
-        <div>
-          <h2>Contact Us</h2>
-          <p class="section-intro">Add your phone number, email address or contact link here.</p>
+          <p class="hero-description">
+            Looking for food products or menu information?
+            Contact BBEST FOOD HOUSE on WhatsApp to ask about
+            our available items, prices, ordering process and
+            other product details.
+          </p>
+
+          <ul class="info-list">
+            <li>Ask about available food products</li>
+            <li>Request menu and price information</li>
+            <li>Confirm availability before ordering</li>
+            <li>Get help with order-related questions</li>
+          </ul>
+
+          <!-- Replace the example number with your real WhatsApp number -->
+          <a
+            class="whatsapp-btn"
+            href="https://wa.me/91YOURNUMBER?text=Hello%20BBEST%20FOOD%20HOUSE%2C%20I%20want%20more%20information%20about%20your%20available%20food%20products%20and%20prices."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact BBEST FOOD HOUSE on WhatsApp"
+          >
+            <svg class="whatsapp-icon"
+                 viewBox="0 0 24 24"
+                 fill="currentColor"
+                 aria-hidden="true">
+              <path d="M20.52 3.48A11.83 11.83 0 0 0 12.1 0
+              C5.53 0 .19 5.34.19 11.91c0 2.1.55 4.15
+              1.6 5.96L.1 24l6.29-1.65a11.9 11.9 0 0 0
+              5.7 1.45h.01c6.57 0 11.91-5.34
+              11.91-11.91 0-3.18-1.24-6.17-3.49-8.41z
+              M12.1 21.78a9.88 9.88 0 0 1-5.03-1.38l-.36-.21
+              -3.73.98.99-3.64-.23-.37a9.85 9.85 0 0 1
+              -1.52-5.25c0-5.45 4.44-9.89 9.9-9.89
+              2.64 0 5.12 1.03 6.98 2.9a9.83 9.83 0 0 1
+              2.9 6.99c0 5.45-4.44 9.87-9.9 9.87zm5.43-7.4
+              c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15
+              -.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22
+              -.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78
+              -1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35
+              .45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52
+              -.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51
+              h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04
+              2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.2
+              5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2
+              1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3
+              .17-1.42-.07-.13-.27-.2-.57-.35z"/>
+            </svg>
+            Chat on WhatsApp
+          </a>
+
+          <p class="small-note">
+            Contact us for current product availability, prices
+            and ordering details. Items and services are subject
+            to confirmation.
+          </p>
         </div>
-        <a class="button" href="mailto:hello@example.com">Email Us</a>
+
+        <aside class="food-panel" aria-label="Food product information">
+          <div class="food-symbol" aria-hidden="true">🍽️</div>
+
+          <h2>What Would You Like to Know?</h2>
+
+          <p>
+            Message us to learn more about the food items
+            currently available at BBEST FOOD HOUSE.
+          </p>
+
+          <div class="product-item">
+            <strong>Food Products</strong>
+            Ask us about available items and product details.
+          </div>
+
+          <div class="product-item">
+            <strong>Menu & Prices</strong>
+            Request the current menu and applicable prices.
+          </div>
+
+          <div class="product-item">
+            <strong>Orders & Availability</strong>
+            Confirm item availability and ordering arrangements.
+          </div>
+
+          <div class="contact-note">
+            Please confirm all product, price and delivery
+            details with us before placing an order.
+          </div>
+        </aside>
+
       </div>
     </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>© <span id="year"></span> My Website. All rights reserved.</p>
-      <p><a href="#about">About Us</a> · <a href="#contact">Contact</a></p>
+<section class="products-section" id="our-products">
+  <div class="products-container">
+
+    <div class="products-heading">
+      <span class="products-tag">OUR PRODUCTS</span>
+
+      <h2>What We Offer at
+        <span>BBEST FOOD HOUSE</span>
+      </h2>
+
+      <p>
+        Explore information about our available food products.
+        Contact us to confirm product details, current prices
+        and availability before placing an order.
+      </p>
     </div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+    <div class="products-grid">
+
+      <article class="product-card">
+        <div class="product-icon" aria-hidden="true">🍽️</div>
+        <h3>Food Items</h3>
+        <p>
+          Contact us to learn about the food items currently
+          available at BBEST FOOD HOUSE.
+        </p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-icon" aria-hidden="true">🥗</div>
+        <h3>Food Options</h3>
+        <p>
+          Ask us about available food varieties and the
+          details of individual products.
+        </p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-icon" aria-hidden="true">🧾</div>
+        <h3>Menu & Pricing</h3>
+        <p>
+          Request our current menu or product list and confirm
+          applicable prices directly with us.
+        </p>
+      </article>
+
+      <article class="product-card">
+        <div class="product-icon" aria-hidden="true">📦</div>
+        <h3>Product Availability</h3>
+        <p>
+          Check whether a particular item is available and
+          ask about the ordering process.
+        </p>
+      </article>
+
+    </div>
+
+    <div class="products-note">
+      <strong>Before You Order</strong>
+      <p>
+        Product selection, ingredients, prices, availability
+        and delivery options may vary. Please confirm the
+        relevant details with BBEST FOOD HOUSE before ordering.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .products-section {
+    padding: 75px 20px;
+    background: #ffffff;
+    color: #242424;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .products-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .products-heading {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  .products-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #b91c1c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .products-heading h2 {
+    margin: 0 0 16px;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    color: #242424;
+  }
+
+  .products-heading h2 span {
+    color: #b91c1c;
+  }
+
+  .products-heading p {
+    margin: 0;
+    color: #606060;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .product-card {
+    padding: 26px 20px;
+    border: 1px solid #f0dfd4;
+    border-radius: 16px;
+    background: #fffaf6;
+    transition: border-color 0.2s ease;
+  }
+
+  .product-card:hover {
+    border-color: #d97745;
+  }
+
+  .product-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background: #ffeadb;
+    font-size: 29px;
+  }
+
+  .product-card h3 {
+    margin: 0 0 10px;
+    color: #a91d1d;
+    font-size: 19px;
+    line-height: 1.4;
+  }
+
+  .product-card p {
+    margin: 0;
+    color: #5b5b5b;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .products-note {
+    max-width: 850px;
+    margin: 30px auto 0;
+    padding: 22px;
+    border-left: 4px solid #b91c1c;
+    border-radius: 8px;
+    background: #fff4eb;
+  }
+
+  .products-note strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #8f1919;
+    font-size: 16px;
+  }
+
+  .products-note p {
+    margin: 0;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 850px) {
+    .products-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .products-section {
+      padding: 52px 16px;
+    }
+
+    .products-heading {
+      margin-bottom: 28px;
+    }
+
+    .products-heading p {
+      font-size: 15px;
+    }
+
+    .products-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .product-card {
+      padding: 22px;
+    }
+
+    .products-note {
+      padding: 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .product-card {
+      transition: none;
+    }
+  }
+</style>
+
+
+<section class="bfood-about" id="about-us">
+  <div class="bfood-about-container">
+
+    <div class="bfood-about-label">
+      ABOUT BBEST FOOD HOUSE
+    </div>
+
+    <div class="bfood-about-grid">
+
+      <div class="bfood-about-content">
+        <h2>
+          Get to Know
+          <span>BBEST FOOD HOUSE</span>
+        </h2>
+
+        <p class="bfood-about-intro">
+          Welcome to BBEST FOOD HOUSE, your point of contact
+          for information about our available food products.
+        </p>
+
+        <p>
+          We aim to make it easier for customers to learn
+          about the products we offer, enquire about prices,
+          check availability and understand the ordering process.
+        </p>
+
+        <p>
+          Whether you want to know more about a particular
+          food item or need details before placing an order,
+          you can contact us directly through WhatsApp.
+          Our team can help you with product-related enquiries.
+        </p>
+
+        <div class="bfood-about-points">
+          <div class="bfood-about-point">
+            <span class="bfood-check">✓</span>
+            <div>
+              <h3>Product Information</h3>
+              <p>Ask about available items and their details.</p>
+            </div>
+          </div>
+
+          <div class="bfood-about-point">
+            <span class="bfood-check">✓</span>
+            <div>
+              <h3>Clear Pricing Enquiries</h3>
+              <p>Confirm current prices before placing an order.</p>
+            </div>
+          </div>
+
+          <div class="bfood-about-point">
+            <span class="bfood-check">✓</span>
+            <div>
+              <h3>Direct Communication</h3>
+              <p>Contact us for availability and order-related questions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bfood-about-panel">
+        <div class="bfood-about-symbol" aria-hidden="true">
+          🍴
+        </div>
+
+        <h3>Here to Help You</h3>
+
+        <p>
+          Need more information about our food products?
+          Get in touch with BBEST FOOD HOUSE for details
+          about available items, prices and ordering.
+        </p>
+
+        <div class="bfood-about-divider"></div>
+
+        <div class="bfood-about-detail">
+          <span>Business</span>
+          <strong>BBEST FOOD HOUSE</strong>
+        </div>
+
+        <div class="bfood-about-detail">
+          <span>Contact Method</span>
+          <strong>WhatsApp Enquiries</strong>
+        </div>
+
+        <div class="bfood-about-detail">
+          <span>Information Available</span>
+          <strong>Products, Prices & Orders</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .bfood-about {
+    padding: 76px 20px;
+    background: #fff5ec;
+    color: #292929;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .bfood-about-container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .bfood-about-label {
+    margin-bottom: 18px;
+    color: #b91c1c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .bfood-about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 45px;
+  }
+
+  .bfood-about-content h2 {
+    margin: 0 0 22px;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+  }
+
+  .bfood-about-content h2 span {
+    display: block;
+    margin-top: 5px;
+    color: #b91c1c;
+  }
+
+  .bfood-about-content > p {
+    margin: 0 0 16px;
+    color: #5b5b5b;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .bfood-about-content > .bfood-about-intro {
+    color: #383838;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+  }
+
+  .bfood-about-points {
+    display: grid;
+    gap: 18px;
+    margin-top: 27px;
+  }
+
+  .bfood-about-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .bfood-check {
+    display: flex;
+    flex: 0 0 27px;
+    width: 27px;
+    height: 27px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #b91c1c;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .bfood-about-point h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    color: #292929;
+  }
+
+  .bfood-about-point p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .bfood-about-panel {
+    padding: 32px;
+    border: 1px solid #f0d8c6;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(99, 45, 15, 0.07);
+  }
+
+  .bfood-about-symbol {
+    display: flex;
+    width: 68px;
+    height: 68px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+    border-radius: 18px;
+    background: #ffeadb;
+    font-size: 34px;
+  }
+
+  .bfood-about-panel > h3 {
+    margin: 0 0 12px;
+    font-size: 24px;
+    color: #a91d1d;
+  }
+
+  .bfood-about-panel > p {
+    margin: 0;
+    color: #606060;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .bfood-about-divider {
+    height: 1px;
+    margin: 23px 0;
+    background: #eee1d8;
+  }
+
+  .bfood-about-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f1e8e1;
+  }
+
+  .bfood-about-detail:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .bfood-about-detail span {
+    color: #777;
+    font-size: 12px;
+  }
+
+  .bfood-about-detail strong {
+    color: #333;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 760px) {
+    .bfood-about {
+      padding: 52px 17px;
+    }
+
+    .bfood-about-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .bfood-about-content h2 {
+      font-size: 34px;
+    }
+
+    .bfood-about-panel {
+      padding: 25px;
+      border-radius: 17px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bfood-about * {
+      scroll-behavior: auto;
+    }
+  }
+</style>
+    
+
+<section class="bbfh-contact" id="contact-us">
+  <div class="bbfh-contact-container">
+
+    <div class="bbfh-contact-heading">
+      <span class="bbfh-contact-tag">GET IN TOUCH</span>
+      <h2>Contact <span>BBEST FOOD HOUSE</span></h2>
+      <p>
+        Have questions about our available food products,
+        prices or ordering process? Contact us using the
+        details below. We will help you with your enquiry.
+      </p>
+    </div>
+
+    <div class="bbfh-contact-grid">
+
+      <!-- CONTACT INFORMATION -->
+      <div class="bbfh-contact-info">
+
+        <div class="bbfh-contact-item">
+          <div class="bbfh-contact-icon" aria-hidden="true">📍</div>
+          <div>
+            <h3>Business Address</h3>
+            <p>
+              Muslim Colony, Pujari Colony,<br>
+              Chirawa, Jhunjhunu - 333026,<br>
+              Rajasthan, India
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=Muslim+Colony%2C+Pujari+Colony%2C+Chirawa%2C+Jhunjhunu+333026%2C+Rajasthan"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bbfh-text-link">
+              View on Google Maps ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="bbfh-contact-item">
+          <div class="bbfh-contact-icon" aria-hidden="true">📞</div>
+          <div>
+            <h3>Phone Number</h3>
+            <p>7412833060</p>
+            <a class="bbfh-text-link" href="tel:+917412833060">
+              Call Us
+            </a>
+          </div>
+        </div>
+
+        <div class="bbfh-contact-item">
+          <div class="bbfh-contact-icon" aria-hidden="true">✉️</div>
+          <div>
+            <h3>Email Address</h3>
+            <p class="bbfh-email">
+              bbestfoodhouse@gmail.com
+            </p>
+            <a
+              class="bbfh-text-link"
+              href="mailto:bbestfoodhouse@gmail.com">
+              Send an Email
+            </a>
+          </div>
+        </div>
+
+        <div class="bbfh-contact-item">
+          <div class="bbfh-contact-icon" aria-hidden="true">💬</div>
+          <div>
+            <h3>WhatsApp Enquiries</h3>
+            <p>Ask us about food products, prices and orders.</p>
+            <a
+              class="bbfh-text-link"
+              href="https://wa.me/917412833060?text=Hello%20BBEST%20FOOD%20HOUSE%2C%20I%20would%20like%20more%20information%20about%20your%20available%20food%20products."
+              target="_blank"
+              rel="noopener noreferrer">
+              Message Us on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CONTACT CTA -->
+      <div class="bbfh-contact-card">
+        <div class="bbfh-contact-card-symbol" aria-hidden="true">
+          💬
+        </div>
+
+        <h3>How Can We Help You?</h3>
+
+        <p>
+          Contact BBEST FOOD HOUSE for information about
+          available food items, current prices, product
+          availability and the ordering process.
+        </p>
+
+        <a
+          class="bbfh-whatsapp-btn"
+          href="https://wa.me/917412833060?text=Hello%20BBEST%20FOOD%20HOUSE%2C%20I%20want%20more%20information%20about%20your%20available%20food%20products%20and%20prices."
+          target="_blank"
+          rel="noopener noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24"
+               fill="currentColor" aria-hidden="true">
+            <path d="M20.52 3.48A11.83 11.83 0 0 0 12.1 0
+            C5.53 0 .19 5.34.19 11.91c0 2.1.55 4.15
+            1.6 5.96L.1 24l6.29-1.65a11.9 11.9 0 0 0
+            5.7 1.45h.01c6.57 0 11.91-5.34
+            11.91-11.91 0-3.18-1.24-6.17-3.49-8.41z
+            M12.1 21.78a9.88 9.88 0 0 1-5.03-1.38l-.36-.21
+            -3.73.98.99-3.64-.23-.37a9.85 9.85 0 0 1
+            -1.52-5.25c0-5.45 4.44-9.89 9.9-9.89
+            2.64 0 5.12 1.03 6.98 2.9a9.83 9.83 0 0 1
+            2.9 6.99c0 5.45-4.44 9.87-9.9 9.87zm5.43-7.4
+            c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15
+            -.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22
+            -.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78
+            -1.67-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35
+            .45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52
+            -.08-.15-.67-1.62-.92-2.22-.24-.58-.48-.5-.67-.51
+            h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04
+            2.49 0 1.47 1.07 2.88 1.22 3.08.15.2 2.1 3.2
+            5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.2
+            1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3
+            .17-1.42-.07-.13-.27-.2-.57-.35z"/>
+          </svg>
+          Contact on WhatsApp
+        </a>
+
+        <div class="bbfh-contact-divider"></div>
+
+        <p class="bbfh-contact-note">
+          Please confirm product details, prices and availability
+          directly with us before placing an order.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .bbfh-contact {
+    padding: 75px 20px;
+    background: #fffaf5;
+    color: #292929;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .bbfh-contact-container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .bbfh-contact-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 42px;
+  }
+
+  .bbfh-contact-tag {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #b91c1c;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .bbfh-contact-heading h2 {
+    margin: 0 0 15px;
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.2;
+  }
+
+  .bbfh-contact-heading h2 span {
+    color: #b91c1c;
+  }
+
+  .bbfh-contact-heading > p {
+    margin: 0;
+    color: #626262;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .bbfh-contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: stretch;
+    gap: 28px;
+  }
+
+  .bbfh-contact-info {
+    display: grid;
+    gap: 15px;
+  }
+
+  .bbfh-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 21px;
+    background: #fff;
+    border: 1px solid #f0e1d6;
+    border-radius: 13px;
+  }
+
+  .bbfh-contact-icon {
+    display: flex;
+    flex: 0 0 47px;
+    width: 47px;
+    height: 47px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #ffeadb;
+    font-size: 22px;
+  }
+
+  .bbfh-contact-item h3 {
+    margin: 0 0 7px;
+    color: #a91d1d;
+    font-size: 17px;
+  }
+
+  .bbfh-contact-item p {
+    margin: 0 0 7px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+  }
+
+  .bbfh-text-link {
+    display: inline-block;
+    color: #b91c1c;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .bbfh-contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 35px;
+    border-radius: 20px;
+    background: #fff0e3;
+    border: 1px solid #f2dac7;
+  }
+
+  .bbfh-contact-card-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 22px;
+    border-radius: 18px;
+    background: #fff;
+    font-size: 31px;
+  }
+
+  .bbfh-contact-card h3 {
+    margin: 0 0 14px;
+    font-size: 27px;
+    line-height: 1.3;
+  }
+
+  .bbfh-contact-card > p {
+    margin: 0;
+    color: #5c5c5c;
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  .bbfh-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 53px;
+    margin-top: 24px;
+    padding: 13px 18px;
+    border-radius: 10px;
+    background: #168746;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .bbfh-whatsapp-btn:hover {
+    background: #116b37;
+  }
+
+  .bbfh-whatsapp-btn:focus-visible,
+  .bbfh-text-link:focus-visible {
+    outline: 3px solid #222;
+    outline-offset: 4px;
+  }
+
+  .bbfh-contact-divider {
+    width: 100%;
+    height: 1px;
+    margin: 25px 0 18px;
+    background: #e8d3c2;
+  }
+
+  .bbfh-contact-card > .bbfh-contact-note {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  @media (max-width: 760px) {
+    .bbfh-contact {
+      padding: 52px 16px;
+    }
+
+    .bbfh-contact-heading {
+      margin-bottom: 30px;
+    }
+
+    .bbfh-contact-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .bbfh-contact-item {
+      padding: 18px;
+      gap: 13px;
+    }
+
+    .bbfh-contact-card {
+      padding: 26px;
+      border-radius: 16px;
+    }
+
+    .bbfh-contact-card h3 {
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .bbfh-contact-icon {
+      flex-basis: 40px;
+      width: 40px;
+      height: 40px;
+    }
+
+    .bbfh-contact-item {
+      padding: 14px;
+    }
+
+    .bbfh-contact-card {
+      padding: 20px;
+    }
+  }
+</style>
+
+
+
+<section class="bbfh-legal" id="legal-policies">
+  <div class="bbfh-legal-container">
+
+    <div class="bbfh-legal-heading">
+      <span>IMPORTANT INFORMATION</span>
+      <h2>Policies & <strong>Conditions</strong></h2>
+      <p>
+        Please review our policies to understand how BBEST FOOD
+        HOUSE handles customer information, orders and
+        product-related enquiries.
+      </p>
+    </div>
+
+    <!-- PRIVACY POLICY -->
+    <article class="bbfh-policy" id="privacy-policy">
+      <h3>1. Privacy Policy</h3>
+
+      <p>
+        BBEST FOOD HOUSE respects your privacy. This policy
+        explains how information may be handled when you visit
+        our website or contact us.
+      </p>
+
+      <h4>Information We May Receive</h4>
+      <p>
+        When you contact us, you may voluntarily provide
+        information such as your name, phone number, email
+        address and the details of your enquiry or order.
+      </p>
+
+      <h4>How We Use Information</h4>
+      <p>
+        Information provided by you may be used to respond to
+        enquiries, communicate about products, confirm order
+        details and provide customer support.
+      </p>
+
+      <h4>Third-Party Services</h4>
+      <p>
+        If you use WhatsApp, your communication is also subject
+        to WhatsApp's applicable terms and privacy policy.
+        External services may process information under their
+        own policies.
+      </p>
+
+      <h4>Data Security and Retention</h4>
+      <p>
+        We take reasonable steps to protect information under
+        our control and retain it only as needed for legitimate
+        business purposes or applicable legal requirements.
+        No online transmission or storage method can be
+        guaranteed completely secure.
+      </p>
+
+      <h4>Your Choices</h4>
+      <p>
+        You may contact us to ask about personal information
+        you have provided or request correction or deletion
+        where applicable law permits.
+      </p>
+
+      <h4>Contact Information</h4>
+      <p>
+        Email:
+        <a href="mailto:bbestfoodhouse@gmail.com">
+          bbestfoodhouse@gmail.com
+        </a>
+      </p>
+    </article>
+
+    <!-- TERMS AND CONDITIONS -->
+    <article class="bbfh-policy" id="terms-conditions">
+      <h3>2. Terms & Conditions</h3>
+
+      <p>
+        By using the BBEST FOOD HOUSE website or contacting
+        us through the available contact methods, you agree
+        to use our website lawfully and responsibly.
+      </p>
+
+      <h4>Product Information</h4>
+      <p>
+        Product descriptions, availability and other details
+        are provided for customer information. Please confirm
+        the relevant details with us before placing an order.
+      </p>
+
+      <h4>Prices and Orders</h4>
+      <p>
+        Prices, applicable charges and order arrangements
+        should be confirmed directly with BBEST FOOD HOUSE.
+        An enquiry or WhatsApp message does not, by itself,
+        guarantee order acceptance or product availability.
+      </p>
+
+      <h4>Customer Responsibilities</h4>
+      <p>
+        Customers should provide accurate information when
+        making enquiries or placing orders and should review
+        the confirmed product and payment details before
+        completing a purchase.
+      </p>
+
+      <h4>Website Use</h4>
+      <p>
+        You must not misuse the website, attempt unauthorized
+        access or use the website for unlawful activities.
+      </p>
+
+      <h4>Changes to These Terms</h4>
+      <p>
+        We may update these terms when necessary. Updated
+        terms will be published on this page. Applicable
+        consumer rights remain unaffected.
+      </p>
+    </article>
+
+    <!-- DISCLAIMER -->
+    <article class="bbfh-policy" id="disclaimer">
+      <h3>3. Disclaimer</h3>
+
+      <p>
+        The information on this website is provided for
+        general informational purposes about BBEST FOOD HOUSE
+        and its food products.
+      </p>
+
+      <h4>Accuracy of Information</h4>
+      <p>
+        We make reasonable efforts to keep information useful
+        and accurate. However, product details, availability
+        and prices may change. Please confirm important
+        information directly with us before ordering.
+      </p>
+
+      <h4>Food and Ingredients</h4>
+      <p>
+        Customers with food allergies, dietary restrictions
+        or ingredient-related concerns should contact us
+        before purchasing and verify relevant product
+        information. Do not assume an item is allergen-free
+        unless this has been specifically confirmed.
+      </p>
+
+      <h4>External Links</h4>
+      <p>
+        This website may link to third-party services such as
+        WhatsApp or Google Maps. BBEST FOOD HOUSE does not
+        control the content or privacy practices of those
+        external services.
+      </p>
+
+      <h4>No Unverified Guarantees</h4>
+      <p>
+        No statement on this website should be interpreted
+        as a guarantee of product availability, suitability
+        or a particular result unless expressly confirmed.
+        Nothing in this disclaimer excludes rights that
+        cannot legally be excluded.
+      </p>
+    </article>
+
+    <!-- REFUND AND CANCELLATION POLICY -->
+    <article class="bbfh-policy" id="refund-policy">
+      <h3>4. Refund & Cancellation Policy</h3>
+
+      <h4>Before Placing an Order</h4>
+      <p>
+        Customers should confirm the product, quantity, price,
+        applicable charges and order details before making
+        payment or confirming an order.
+      </p>
+
+      <h4>Order Cancellation</h4>
+      <p>
+        If you wish to cancel an order, contact us as soon as
+        possible at 7412833060 or by emailing
+        bbestfoodhouse@gmail.com. Cancellation may depend on
+        the order status and whether preparation or dispatch
+        has started, subject to applicable law.
+      </p>
+
+      <h4>Refund Requests</h4>
+      <p>
+        If you receive an incorrect, damaged or materially
+        different item, or experience another order-related
+        problem, contact us with your order details and
+        supporting information where available. We will
+        review the issue and explain the applicable resolution.
+      </p>
+
+      <h4>Refund Processing</h4>
+      <p>
+        Where a refund is approved, the method and expected
+        processing time will be communicated to the customer.
+        Actual processing may depend on the payment provider
+        or bank.
+      </p>
+
+      <h4>Food Product Considerations</h4>
+      <p>
+        For food products, please report quality, safety,
+        damage or incorrect-item concerns promptly. Any
+        cancellation, return or refund decision will be
+        handled according to the confirmed order terms and
+        applicable consumer and food-safety laws. Nothing
+        in this policy removes rights provided by law.
+      </p>
+
+      <h4>Contact for Refunds</h4>
+      <p>
+        Phone:
+        <a href="tel:+917412833060">7412833060</a><br>
+        Email:
+        <a href="mailto:bbestfoodhouse@gmail.com">
+          bbestfoodhouse@gmail.com
+        </a>
+      </p>
+    </article>
+
+    <!-- BUSINESS CONTACT DETAILS -->
+    <div class="bbfh-legal-contact">
+      <h3>BBEST FOOD HOUSE</h3>
+      <p>
+        Muslim Colony, Pujari Colony, Chirawa,
+        Jhunjhunu - 333026, Rajasthan, India
+      </p>
+      <p>
+        Phone: <a href="tel:+917412833060">7412833060</a>
+      </p>
+      <p>
+        Email:
+        <a href="mailto:bbestfoodhouse@gmail.com">
+          bbestfoodhouse@gmail.com
+        </a>
+      </p>
+    </div>
+
+    <p class="bbfh-legal-updated">
+      Please review these policies periodically for updates.
+    </p>
+
+  </div>
+</section>
+
+<style>
+  .bbfh-legal {
+    padding: 70px 20px;
+    background: #ffffff;
+    color: #292929;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+  }
+
+  .bbfh-legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .bbfh-legal-heading {
+    margin-bottom: 38px;
+    text-align: center;
+  }
+
+  .bbfh-legal-heading > span {
+    color: #b91c1c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+
+  .bbfh-legal-heading h2 {
+    margin: 10px 0;
+    font-size: clamp(29px, 4vw, 40px);
+    line-height: 1.25;
+  }
+
+  .bbfh-legal-heading h2 strong {
+    color: #b91c1c;
+  }
+
+  .bbfh-legal-heading > p {
+    margin: 0 auto;
+    max-width: 680px;
+    color: #626262;
+    font-size: 15px;
+  }
+
+  .bbfh-policy {
+    margin-bottom: 22px;
+    padding: 28px;
+    border: 1px solid #f0dfd4;
+    border-radius: 14px;
+    background: #fffaf6;
+    overflow-wrap: anywhere;
+  }
+
+  .bbfh-policy h3 {
+    margin: 0 0 17px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1d6c4;
+    color: #b91c1c;
+    font-size: 23px;
+    line-height: 1.4;
+  }
+
+  .bbfh-policy h4 {
+    margin: 20px 0 5px;
+    color: #333333;
+    font-size: 16px;
+  }
+
+  .bbfh-policy p {
+    margin: 0 0 12px;
+    color: #565656;
+    font-size: 14px;
+  }
+
+  .bbfh-policy p:last-child {
+    margin-bottom: 0;
+  }
+
+  .bbfh-policy a,
+  .bbfh-legal-contact a {
+    color: #a91d1d;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+
+  .bbfh-legal-contact {
+    margin-top: 32px;
+    padding: 26px;
+    border-radius: 14px;
+    background: #fff0e3;
+    text-align: center;
+  }
+
+  .bbfh-legal-contact h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+  }
+
+  .bbfh-legal-contact p {
+    margin: 5px 0;
+    color: #555555;
+    font-size: 14px;
+  }
+
+  .bbfh-legal-updated {
+    margin: 20px 0 0;
+    color: #777777;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .bbfh-legal {
+      padding: 48px 15px;
+    }
+
+    .bbfh-policy {
+      padding: 21px 17px;
+      border-radius: 11px;
+    }
+
+    .bbfh-policy h3 {
+      font-size: 21px;
+    }
+
+    .bbfh-policy h4 {
+      font-size: 15px;
+    }
+
+    .bbfh-policy p {
+      font-size: 14px;
+    }
+
+    .bbfh-legal-contact {
+      padding: 22px 16px;
+    }
+  }
+</style>
+<!-- END LEGAL POLICIES SECTION -->
+
+</main>
 </body>
 </html>
